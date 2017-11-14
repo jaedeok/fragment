@@ -2,6 +2,7 @@ package project.my_fragment;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -10,6 +11,7 @@ import project.my_fragment.seccondview.SeccondFragment;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout)findViewById(R.id.tab_layout);
         ViewPager viewPager = (ViewPager)findViewById(R.id.viewpager);
+
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         setupViewPager(viewPager);
 

@@ -7,10 +7,12 @@ package project.my_fragment.firstview;
 public interface FirstContract {
 
     public interface IView{
-
+        void refresh();
     }
 
     public interface  IPresenter{
+        void loadPhotos(int page);
+
 
     }
 }
